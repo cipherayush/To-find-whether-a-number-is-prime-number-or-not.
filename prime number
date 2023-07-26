@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j;
+    int primeFactors;
+    int n;
+    scanf("%d",&n);
+    if(n > 2) {
+        for(i=2 ; i <= n; i++) {
+            primeFactors = 0;
+            for(j=1; j<=i; j++) {
+                if(i%j == 0) {
+                    primeFactors++;
+                }
+            }
+            if(primeFactors == 2) {
+                printf("%d ",i);
+            }
+        }
+    } else {
+        printf("Please enter number greater than 2");
+    }
+    
+}
